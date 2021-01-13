@@ -9,6 +9,8 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     id 'application'
+    id "com.palantir.jacoco-coverage" version "0.4.0"
+
 }
 
 repositories {
@@ -22,9 +24,24 @@ dependencies {
 
     // This dependency is used by the application.
     implementation 'com.google.guava:guava:29.0-jre'
+
+    testCompile "org.mockito:mockito-core:2.+"
 }
 
 application {
     // Define the main class for the application.
-    mainClass = 'GameOfLife.App'
+    mainClass = 'gameoflife.App'
+}
+
+test {
+    beforeTest { descriptor ->
+        logger.lifecycle("Running test: ${descriptor}")
+    }
+    testLogging {
+        afterSuite { desc, result ->
+            if (!desc.parent) {
+                println "Results: ${result.resultType} (${result.testCount} tests, ${result.successfulTestCount} successes, ${result.failedTestCount} failures, ${result.skippedTestCount} skipped)"
+            }
+        }
+    }
 }

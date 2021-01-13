@@ -22,3 +22,9 @@ It takes input from a file and prints the next generations of that grid in termi
     ```
     $ gradle run build
     ```
+
+### How to run tests:
+- Run the following command to run the test cases
+    ```
+    $ gradle clean test
+    ```
