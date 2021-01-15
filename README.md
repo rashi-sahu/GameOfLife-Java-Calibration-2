@@ -1,4 +1,5 @@
 # Game of life
+
 It is an implementation of Conways's Game of Life in Java and Gradle
 
 It takes input from a file and prints the next generations of that grid in terminal.
@@ -12,7 +13,8 @@ It takes input from a file and prints the next generations of that grid in termi
 - Java
 - Gradle
 
-### Installation: 
+### Installation:
+
 - Clone the repository and Enter into the directory
     ```
     $ git clone https://github.com/rashi-sahu/GameOfLife-Java-Calibration-2.git
@@ -23,7 +25,15 @@ It takes input from a file and prints the next generations of that grid in termi
     $ gradle run build
     ```
 
+### How to run program:
+
+- Run the following command to run the game
+    ```
+    $ gradle run
+    ```
+
 ### How to run tests:
+
 - Run the following command to run the test cases
     ```
     $ gradle clean test
