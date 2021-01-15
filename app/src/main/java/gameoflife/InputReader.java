@@ -10,7 +10,7 @@ public class InputReader {
     public ArrayList<ArrayList<Integer>> readInputFromFile() {
         Scanner s;
         try {
-            s = new Scanner(new File("/home/rashi/Game-of-Life-gradle/app/src/main/resources/Input.txt"));
+            s = new Scanner(new File("/home/rashi/Game-Of-Life/app/src/main/resources/Input.txt"));
         } catch (FileNotFoundException ex) {
             System.out.println(ex.getMessage());
             return new ArrayList<>();
@@ -40,5 +40,4 @@ public class InputReader {
 
         return outputGrid;
     }
-
 }

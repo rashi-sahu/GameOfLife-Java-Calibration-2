@@ -19,6 +19,7 @@ public class App {
         while (t > 0) {
             System.out.println("\033[2J\033[1;1H");
             nextGenerationGrid.printGrid();
+            nextGenerationGrid.nextGeneration();
             t--;
             Thread.sleep(1000);
         }
